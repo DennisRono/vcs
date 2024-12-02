@@ -1,0 +1,13 @@
+# Ignore compiled executable files
+*.exe
+
+# Ignore object files
+*.o
+
+# Ignore temporary or backup files
+*.tmp
+*.bak
+*~
+
+# Ignore build artifacts (optional)
+build/
