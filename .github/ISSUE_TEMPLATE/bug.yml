@@ -1,7 +1,7 @@
 name: Bug report
 description: Report a problem you encountered
-title: "[Bug]: "
-labels: ["bug"]
+title: '[Bug]: '
+labels: ['bug']
 body:
   - type: markdown
     attributes:
@@ -10,7 +10,7 @@ body:
     id: terms
     attributes:
       label: Guidelines
-      description: By submitting this issue, you agree to follow our [Contributing Guidelines](https://github.com/jessesquires/.github/blob/main/CONTRIBUTING.md).
+      description: By submitting this issue, you agree to follow our [Contributing Guidelines](https://github.com/DennisRono/vcs/.github/blob/main/CONTRIBUTING.md).
       options:
         - label: I agree to follow this project's Contributing Guidelines.
           required: true
@@ -19,7 +19,7 @@ body:
     attributes:
       label: Project Version
       description: Which project versions are affected?
-      placeholder: "1.0, 2.2, 3.5.1"
+      placeholder: '1.0, 2.2, 3.5.1'
     validations:
       required: true
   - type: input
@@ -27,7 +27,7 @@ body:
     attributes:
       label: Platform and OS Version
       description: Which platforms or operating systems are affected?
-      placeholder: "iOS 12.1, tvOS 13.0, macOS 10.15.1, Safari 12"
+      placeholder: 'iOS 12.1, tvOS 13.0, macOS 10.15.1, Safari 12'
     validations:
       required: true
   - type: input
@@ -35,7 +35,7 @@ body:
     attributes:
       label: Affected Devices
       description: Does this only occur on specific devices?
-      placeholder: "All, iPhone X, iPhone SE, iPad Air, MacBook Pro"
+      placeholder: 'All, iPhone X, iPhone SE, iPad Air, MacBook Pro'
     validations:
       required: true
   - type: input
@@ -43,7 +43,7 @@ body:
     attributes:
       label: Existing Issues
       description: Are there any similar existing issues?
-      placeholder: "#42"
+      placeholder: '#42'
     validations:
       required: false
   - type: textarea

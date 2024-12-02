@@ -1,15 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <winsock2.h> // Include Winsock2 for Windows networking
+#include <winsock2.h> 
 #include "network_transfer.h"
 
-#pragma comment(lib, "ws2_32.lib") // Link Winsock library
+#pragma comment(lib, "ws2_32.lib") 
 
 #define BUFFER_SIZE 1024
 #define CONFIG_FILE ".vcs/config"
 
-// Initialize Winsock
+
 void initialize_winsock() {
     WSADATA wsa;
     if (WSAStartup(MAKEWORD(2, 2), &wsa) != 0) {
@@ -18,7 +18,7 @@ void initialize_winsock() {
     }
 }
 
-// Cleanup Winsock
+
 void cleanup_winsock() {
     WSACleanup();
 }
@@ -39,7 +39,7 @@ void set_origin(const char *url) {
     printf("Set origin: %s\n", url);
 }
 
-// Push repository data to a remote server
+
 void push_to_server(const char *server_ip, int port) {
     initialize_winsock();
 
@@ -65,7 +65,7 @@ void push_to_server(const char *server_ip, int port) {
 
     printf("Connected to server. Sending repository data...\n");
 
-    // Example: Sending dummy repository data
+    
     char buffer[BUFFER_SIZE];
     FILE *repo_data = fopen(".vcs/repository.zip", "rb");
     if (!repo_data) {
@@ -93,7 +93,7 @@ void push_to_server(const char *server_ip, int port) {
     cleanup_winsock();
 }
 
-// Fetch repository data from a remote server
+
 void fetch_from_server(const char *server_ip, int port) {
     initialize_winsock();
 
@@ -119,7 +119,7 @@ void fetch_from_server(const char *server_ip, int port) {
 
     printf("Connected to server. Receiving repository data...\n");
 
-    // Example: Receiving repository data
+    
     char buffer[BUFFER_SIZE];
     FILE *repo_data = fopen(".vcs/repository_received.zip", "wb");
     if (!repo_data) {
